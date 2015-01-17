@@ -1,0 +1,39 @@
+body {
+  background-color: #999900;
+  font-family: verdana, arial;
+}
+h1{
+	color: navy;
+	background-color: orange;
+	padding: 25px 15px 0 100px;
+	margin-bottom: 100px;
+}
+h2{
+	color: yellow;
+	text-decoration: underline;
+	background-color: blue;
+}
+
+a:link {
+	color: black;
+}
+
+a:visited{
+    color: black;
+}
+
+a:hover{
+	color: red;
+}
+a:active{
+	color: white;
+}
+ul li{
+	background-color: red;
+	margin-top: 20px;
+	display: inline;
+}
+
+ul li:first-child{
+	color: green;
+}
