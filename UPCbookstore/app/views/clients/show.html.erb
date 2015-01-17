@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @client.name %>
+</p>
+
+<p>
+  <strong>Apellido:</strong>
+  <%= @client.lastname %>
+</p>
+
+<%= link_to 'Editar', edit_client_path(@client) %> |
+<%= link_to 'Regresar', clients_path %>
