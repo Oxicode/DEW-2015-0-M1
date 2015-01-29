@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  resources :authors
+
   root to: "clients#index"
 
   resources :books
