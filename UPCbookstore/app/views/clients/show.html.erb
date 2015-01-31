@@ -10,5 +10,18 @@
   <%= @client.lastname %>
 </p>
 
+<table>
+
+  <% @client.books.each do |book| %>
+     <tr>
+     	<td>
+     	  <%= book.title %>	
+     	</td>
+     </tr>
+  <% end %>
+
+</table>
+
+<%= link_to 'Agregar Libro', add_book_client_path(@client) %> |
 <%= link_to 'Editar', edit_client_path(@client) %> |
 <%= link_to 'Regresar', clients_path %>

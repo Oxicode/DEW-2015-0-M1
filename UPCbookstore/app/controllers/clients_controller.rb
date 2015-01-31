@@ -1,6 +1,10 @@
 class ClientsController < ApplicationController
   before_action :set_client, only: [:show, :edit, :update, :destroy]
 
+
+  def add_book
+    @client = Client.find(params[:id])
+  end
   # GET /clients
   # GET /clients.json
   def index
@@ -69,6 +73,6 @@ class ClientsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def client_params
-      params.require(:client).permit(:name, :lastname)
+      params.require(:client).permit(:name, :lastname, book_ids:[])
     end
 end

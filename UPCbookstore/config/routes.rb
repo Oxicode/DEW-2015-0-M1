@@ -1,12 +1,15 @@
 Rails.application.routes.draw do
+  root to: "clients#index"
   
   resources :authors
 
-  root to: "clients#index"
-
   resources :books
 
-  resources :clients
+  resources :clients do
+    member do
+      get "add_book"
+    end
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
