@@ -1,23 +1,15 @@
 class TweetsController < ApplicationController
   before_action :set_tweet, only: [:show, :edit, :update, :destroy]
 
-  def read_message
-    @tweet = Tweet.new(tweet_params)
-  end
-  
-  def show_message_by_url
-    @tweet = Tweet.new(tweet_params)
-  end
-  
-  def update_status
-    @tweet = Tweet.new(tweet_params)  
-  end
-
   # GET /tweets
   # GET /tweets.json
   def index
     @tweets = Tweet.all
     @tweet = Tweet.new
+  end
+
+  def read_message
+    @tweet = Tweet.new(tweet_params)
   end
 
   # GET /tweets/1
